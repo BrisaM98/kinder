@@ -27,4 +27,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<a href='form_alumnos.php'>Intentar de nuevo</a>";
     }
 }
+    
 ?>
