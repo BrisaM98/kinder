@@ -2,7 +2,7 @@
 ob_start(); 
 include 'conexion.php'; 
 
-// se verifica que los datos vengan del form
+// se verifica que los datos vengan del forms
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['maestra'], $_POST['correo'], $_POST['cel'])) {
     
     $maestra = $_POST['maestra'];
@@ -36,3 +36,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['maestra'], $_POST['cor
 }
 
 ?>
+
