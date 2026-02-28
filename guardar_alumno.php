@@ -7,12 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = $_POST['nombre_alu'];
     $apellidos = $_POST['apellidos_alu'];
 
-    // Verificar el grupo
+    // verificar el grupo
     $checkGrupo = $conn->prepare("SELECT id_gpo FROM grupo WHERE id_gpo = ?");
     $checkGrupo->execute([$id_gpo]);
 
     if ($checkGrupo->rowCount() > 0) {
-        // El grupo existe
+        // el grupo existe
         $stmt = $conn->prepare("INSERT INTO alumnos (id_gpo, nombre_alu, apellidos_alu) VALUES (?, ?, ?)");
         
         if ($stmt->execute([$id_gpo, $nombre, $apellidos])) {
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Error al registrar el alumno.";
         }
     } else {
-        // Error, el grupo no existe
+        // si el grupo no existe
         echo "Error: El grupo seleccionado no es valido.<br>";
         echo "<a href='form_alumnos.php'>Intentar de nuevo</a>";
     }
