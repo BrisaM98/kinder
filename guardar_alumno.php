@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Error al registrar el alumno.";
         }
     } else {
-        // si el grupo no existe
+        // si el grupo no existe entonces
         echo "Error: El grupo seleccionado no es valido.<br>";
         echo "<a href='form_alumnos.php'>Intentar de nuevo</a>";
     }
