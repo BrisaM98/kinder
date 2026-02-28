@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$id_usu, $maestra, $correo, $cel]);
         echo "Personal registrado correctamente.<br>";
     } else {
-        echo "Error: El ID de Usuario no existe.<br>";
+        echo "Error, el ID de Usuario no existe.<br>";
     }
 
     echo "<br><a href='dashboard.php'><button type='button'>Continuar al Panel</button></a>";
