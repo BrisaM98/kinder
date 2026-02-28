@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$id_usu, $grupo]);
         echo "Grupo creado correctamente.<br>";
     } else {
-        echo "Error: El ID de Usuario no existe.<br>";
+        echo "Error, el ID de Usuario no existe.<br>";
     }
 
     echo "<br><a href='dashboard.php'><button type='button'>Continuar al panel</button></a>";
